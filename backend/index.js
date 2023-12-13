@@ -9,7 +9,7 @@ const app = express();
 // Middleware for parsing request body
 app.use(express.json());
 
-// Middleware for handling CORS Policy
+// Middleware for handling CORS Policy Cross-Origin Resource Sharing
 //Allow Custom Origins
 app.use(
     cors({
