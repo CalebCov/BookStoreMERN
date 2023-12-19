@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { useState } from 'react';
 import BackButton from '../components/BackButton';
 import Spinner from '../components/Spinner';
@@ -11,6 +12,14 @@ const CreateBook = () => {
   const [publishYear, setPublishYear] = useState('');
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
+
+  const handleSaveBook = () => {
+    // Basic form validation
+    if (!title || !author || !publishYear) {
+      alert('Please fill in all required fields.');
+      return;
+    }
+    
   const handleSaveBook = () => {
     const data = {
       title,

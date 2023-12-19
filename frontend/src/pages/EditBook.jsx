@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { useState, useEffect } from 'react';
 import BackButton from '../components/BackButton';
 import Spinner from '../components/Spinner';
@@ -25,12 +26,17 @@ const EditBook = () => {
       alert('There is an error. Please check the console');
       console.log(error);
     })
-  }, [])
+  }, [id])
   const handleEditBook = () => {
+    // Basic form validation
+    if (!title || !author || !publishYear) {
+      alert('Please fill in all required fields.');
+      return;
+    }
     const data = {
       title,
       author,
-      publishYear,
+      publishYear: Number(publishYear),
     };
     setLoading(true);
     axios
