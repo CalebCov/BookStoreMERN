@@ -13,13 +13,7 @@ const CreateBook = () => {
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
 
-  const handleSaveBook = () => {
-    // Basic form validation
-    if (!title || !author || !publishYear) {
-      alert('Please fill in all required fields.');
-      return;
-    }
-    
+  
   const handleSaveBook = () => {
     const data = {
       title,
