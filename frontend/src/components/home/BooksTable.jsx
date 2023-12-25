@@ -1,8 +1,10 @@
-import { Link } from "react-router-dom";
-import { AiOutlineEdit } from "react-icons/ai";
-import { BsInfoCircle } from "react-icons/bs";
 // eslint-disable-next-line no-unused-vars
-import { MdOutlineAddBox, MdOutlineDelete } from "react-icons/md";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { AiOutlineEdit } from 'react-icons/ai';
+import { BsInfoCircle } from 'react-icons/bs';
+// eslint-disable-next-line no-unused-vars
+import { MdOutlineDelete } from 'react-icons/md';
 
 // eslint-disable-next-line react/prop-types
 const BooksTable = ({ books }) => {
@@ -22,7 +24,7 @@ const BooksTable = ({ books }) => {
             </tr>
           </thead>
           <tbody>
-            // eslint-disable-next-line react/prop-types
+            
             {books.map((book, index) => (
               <tr key={book._id} className="h-8">
                 <td className="border border-slate-700 rounded-md text-center">
@@ -54,7 +56,9 @@ const BooksTable = ({ books }) => {
             ))}
           </tbody>
         </table>
-  )
-}
+  );
+};
+
+
 
 export default BooksTable
